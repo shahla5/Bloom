@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloom 🌹</title>
+
+    <style>
+
+        /* الصفحة كاملة */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffafc;
+            color: #4f6355;
+        }
+
+
+        /* الشريط العلوي */
+
+        header {
+            background-color: #f8e9ee;
+            padding: 22px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* اسم الموقع */
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #4f6355;
+        }
+
+
+        /* روابط الصفحات */
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4f6355;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c98f9f;
+        }
+
+
+        /* القسم الرئيسي */
+
+        .hero {
+            min-height: 480px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(255,250,252,0.88),
+                    rgba(255,250,252,0.88)
+                ),
+                url("Bloom/البيوني.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 0 0 15px;
+            color: #4f6355;
+        }
+
+
+        .hero h2 {
+            font-size: 28px;
+            margin: 0 0 15px;
+            color: #b77d8d;
+        }
+
+
+        .hero p {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+        }
+
+
+        /* زر */
+
+        .main-button {
+            margin-top: 20px;
+
+            display: inline-block;
+
+            background-color: #b77d8d;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 13px 30px;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .main-button:hover {
+            background-color: #4f6355;
+        }
+
+
+        /* عنوان الأقسام */
+
+        .section-title {
+            text-align: center;
+            margin: 55px 20px 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+            font-size: 16px;
+        }
+
+
+        /* البطاقات */
+
+        .sections {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: auto auto 60px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .card {
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+
+        .card p {
+            color: #777;
+
+            line-height: 1.7;
+
+            min-height: 55px;
+        }
+
+
+        .card a {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            text-decoration: none;
+
+            color: #b77d8d;
+
+            font-weight: bold;
+        }
+
+
+        .card a:hover {
+            color: #4f6355;
+        }
+
+
+        /* الجزء السفلي */
+
+        footer {
+            background-color: #e9f0eb;
+
+            text-align: center;
+
+            padding: 25px;
+
+            color: #536b5b;
+        }
+
+
+        /* للشاشات الصغيرة */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .sections {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .sections {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- الشريط العلوي -->
+
+    <header>
+
+        <div class="logo">
+            Bloom 🌹
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">الرئيسية</a>
+
+            <a href="flowers.html">أنواع الورود</a>
+
+            <a href="occasions.html">المناسبات</a>
+
+            <a href="meanings.html">معاني الورود</a>
+
+            <a href="bouquet.html">تصميم باقة خاصة</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- الواجهة الرئيسية -->
+
+    <section class="hero">
+
+        <h1>Bloom 🌹</h1>
+
+        <h2>لأن لكل لحظة وردتها</h2>
+
+        <p>
+            اكتشفي عالم الورود واختاري ما يناسب ذوقك ومناسبتك.
+            في Bloom يمكنك التعرف على أنواع الورود ومعانيها
+            وتصميم باقتك الخاصة.
+        </p>
+
+
+        <a href="flowers.html" class="main-button">
+            اكتشفي الورود
+        </a>
+
+    </section>
+
+
+
+    <!-- الأقسام -->
+
+    <div class="section-title">
+
+        <h2>اكتشفي Bloom 🌷</h2>
+
+        <p>
+            اختاري القسم الذي تريدين استكشافه
+        </p>
+
+    </div>
+
+
+
+    <section class="sections">
+
+
+        <!-- أنواع الورود -->
+
+        <div class="card">
+
+            <div class="icon">🌷</div>
+
+            <h3>أنواع الورود</h3>
+
+            <p>
+                تعرفي على مجموعة متنوعة من أجمل أنواع الورود.
+            </p>
+
+            <a href="flowers.html">
+                اكتشفي المزيد ←
+            </a>
+
+        </div>
+
+
+
+        <!-- المناسبات -->
+
+        <div class="card">
+
+            <div class="icon">🎀</div>
+
+            <h3>المناسبات</h3>
+
+            <p>
+                اختاري الورود التي تناسب كل مناسبة ولحظة جميلة.
+            </p>
+
+            <a href="occasions.html">
+                اكتشفي المزيد ←
+            </a>
+
+        </div>
+
+
+
+        <!-- معاني الورود -->
+
+        <div class="card">
+
+            <div class="icon">🌸</div>
+
+            <h3>معاني الورود</h3>
+
+            <p>
+                اكتشفي المعاني والمشاعر التي تحملها كل وردة.
+            </p>
+
+            <a href="meanings.html">
+                اكتشفي المزيد ←
+            </a>
+
+        </div>
+
+
+
+        <!-- تصميم باقة -->
+
+        <div class="card">
+
+            <div class="icon">💐</div>
+
+            <h3>تصميم باقة خاصة</h3>
+
+            <p>
+                اختاري ورودك وصممي باقتك الخاصة بطريقة مميزة.
+            </p>
+
+            <a href="bouquet.html">
+                ابدئي التصميم ←
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- أسفل الصفحة -->
+
+    <footer>
+
+        <p>
+            Bloom 🌹 — عالم من الورود والجمال
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
